@@ -1,0 +1,3 @@
+nvm
+npm
+lunarvim
