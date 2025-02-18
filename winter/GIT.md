@@ -1,4 +1,4 @@
-![[git_command.png]]
+![[Pictures/git_command.png]]
 
 ### 提交与修改
 git init: 初始化仓库
