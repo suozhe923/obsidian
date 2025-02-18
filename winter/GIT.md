@@ -1,4 +1,4 @@
-[![](https://github.com/suozhe923/obsidian/blob/main/winter/%E5%9B%BE%E7%89%87/git_command.png)]
+![](https://github.com/suozhe923/obsidian/blob/main/winter/%E5%9B%BE%E7%89%87/git_command.png)
 
 ### 提交与修改
 git init: 初始化仓库
