@@ -2,7 +2,7 @@
 
 ### 提交与修改
 git init: 初始化仓库
-==git add: 添加文件到暂存区==
+**git add**: 添加文件到暂存区
 git add .  :添加所有更改
 git commit: 将暂存区内容添加到仓库
 git clone: 拷贝远程仓库
