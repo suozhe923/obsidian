@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "GIT.md",
+                "file": "备忘录.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "GIT"
+              "title": "备忘录"
             }
           }
         ],
@@ -210,23 +210,24 @@
   },
   "active": "79c3d7dfc9f5581c",
   "lastOpenFiles": [
-    "conflict-files-obsidian-git.md",
-    "GIT.md",
-    "Pictures/git_command.md",
     "Pictures/git_command.png",
+    "计算机组成原理/lec1.md",
+    "计算机组成原理",
+    "大二下/离散数学/1.md",
+    "备忘录.md",
+    "目录.md",
+    "GIT.md",
+    "conflict-files-obsidian-git.md",
+    "Pictures/git_command.md",
     "THE_ART_OF_COMMAND_LINE.md",
     "Rust.md",
     "Python.md",
     "图片/Pasted image 20250218103415.png",
     "Pictures",
-    "备忘录.md",
     "Docker.md",
     "大二下/离散数学/1.md~",
-    "大二下/离散数学/1.md",
     "大二下/离散数学",
-    "大二下/计算机组成原理.md",
     "tuple(元组).md",
-    "目录.md",
     "大二下",
     "Draft.md",
     "the_art_of_command_line_zh.md",
