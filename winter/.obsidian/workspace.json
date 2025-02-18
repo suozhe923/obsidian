@@ -16,14 +16,12 @@
                 "id": "0a2a18f8f63bff9a",
                 "type": "leaf",
                 "state": {
-                  "type": "markdown",
+                  "type": "image",
                   "state": {
-                    "file": "大二下/数据库原理/lec1.md",
-                    "mode": "source",
-                    "source": false
+                    "file": "Pictures/outline1.png"
                   },
-                  "icon": "lucide-file",
-                  "title": "lec1"
+                  "icon": "lucide-image",
+                  "title": "outline1"
                 }
               }
             ]
@@ -107,8 +105,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "19c105baaa96bf83",
@@ -208,12 +205,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0a2a18f8f63bff9a",
+  "active": "decd406923b5119a",
   "lastOpenFiles": [
-    "WORD.md",
+    "Pictures/Entity and Relationship.png",
+    "Draft.md",
     "大二下/数据库原理/lec1.md",
-    "Entity and Relationship.png",
-    "outline1.png",
+    "WORD.md",
+    "Pictures/outline1.png",
     "Pasted image 20250218202413.png",
     "大二下/计算机组成原理/lec1.md",
     "大二下/数据库原理",
@@ -236,7 +234,6 @@
     "大二下/离散数学",
     "tuple(元组).md",
     "大二下",
-    "Draft.md",
     "the_art_of_command_line_zh.md",
     "README-ru.md",
     "Cargo.md",
