@@ -16,12 +16,14 @@
                 "id": "0a2a18f8f63bff9a",
                 "type": "leaf",
                 "state": {
-                  "type": "image",
+                  "type": "split-diff-view",
                   "state": {
-                    "file": "Pictures/outline1.png"
+                    "aFile": "winter/.obsidian/workspace.json",
+                    "bFile": "winter/.obsidian/workspace.json",
+                    "aRef": ""
                   },
-                  "icon": "lucide-image",
-                  "title": "outline1"
+                  "icon": "diff",
+                  "title": "Diff: workspace.json"
                 }
               }
             ]
@@ -205,22 +207,22 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "decd406923b5119a",
+  "active": "0a2a18f8f63bff9a",
   "lastOpenFiles": [
+    "大二下/计算机组成原理/lec1.md",
+    "大二下/离散数学/1.md",
+    "大二下/数据库原理/lec1.md",
+    "Pictures/outline1.png",
     "Pictures/Entity and Relationship.png",
     "Draft.md",
-    "大二下/数据库原理/lec1.md",
     "WORD.md",
-    "Pictures/outline1.png",
     "Pasted image 20250218202413.png",
-    "大二下/计算机组成原理/lec1.md",
     "大二下/数据库原理",
     "Python.md",
     "WORD.md~",
     "备忘录.md",
     "Pictures/git_command.png",
     "大二下/计算机组成原理",
-    "大二下/离散数学/1.md",
     "目录.md",
     "GIT.md",
     "conflict-files-obsidian-git.md",
