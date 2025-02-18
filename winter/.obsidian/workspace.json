@@ -185,17 +185,16 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Rust.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Rust 的大纲"
+              "title": "大纲"
             }
           },
           {
-            "id": "73e79790bdbfb163",
+            "id": "f655c5db1ebf7a54",
             "type": "leaf",
             "state": {
               "type": "git-view",
@@ -224,8 +223,10 @@
   },
   "active": "ac472a511c9a775a",
   "lastOpenFiles": [
-    "备忘录.md",
+    "Python.md",
     "WORD.md",
+    "WORD.md~",
+    "备忘录.md",
     "Pictures/git_command.png",
     "计算机组成原理/lec1.md",
     "计算机组成原理",
@@ -236,7 +237,6 @@
     "Pictures/git_command.md",
     "THE_ART_OF_COMMAND_LINE.md",
     "Rust.md",
-    "Python.md",
     "图片/Pasted image 20250218103415.png",
     "Pictures",
     "Docker.md",
