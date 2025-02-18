@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "WORD.md",
+                "file": "大二下/计算机组成原理/lec1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "WORD"
+              "title": "lec1"
             }
           }
         ],
@@ -221,15 +221,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ac472a511c9a775a",
+  "active": "decd406923b5119a",
   "lastOpenFiles": [
-    "Python.md",
+    "大二下/数据库原理",
     "WORD.md",
+    "Python.md",
     "WORD.md~",
     "备忘录.md",
     "Pictures/git_command.png",
-    "计算机组成原理/lec1.md",
-    "计算机组成原理",
+    "大二下/计算机组成原理/lec1.md",
+    "大二下/计算机组成原理",
     "大二下/离散数学/1.md",
     "目录.md",
     "GIT.md",
