@@ -194,15 +194,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "decd406923b5119a",
+  "active": "cc115e42e031b7ba",
   "lastOpenFiles": [
-    "图片/git_command.png",
-    "THE_ART_OF_COMMAND_LINE.md",
+    "Pictures/git_command.md",
     "GIT.md",
+    "Pictures/git_command.png",
+    "THE_ART_OF_COMMAND_LINE.md",
     "Rust.md",
     "Python.md",
     "图片/Pasted image 20250218103415.png",
-    "图片",
+    "Pictures",
     "备忘录.md",
     "Docker.md",
     "大二下/离散数学/1.md~",
