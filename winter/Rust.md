@@ -350,7 +350,34 @@ fn main() {
 ```
 
 ## Ownership
+_Stack and heap_
+栈中的所有数据都必须占用已知且固定的大小。在编译时大小未知或大小可能变化的数据，要改为存储在堆上。 堆是缺乏组织的：当向堆放入数据时，你要请求一定大小的空间。内存分配器（memory allocator）在堆的某处找到一块足够大的空位，把它标记为已使用，并返回一个表示该位置地址的 **指针**（_pointer_）。这个过程称作 **在堆上分配内存**（_allocating on the heap_），有时简称为 “分配”（allocating）。（将数据推入栈中并不被认为是分配）。因为指向放入堆中数据的指针是已知的并且大小是固定的，你可以将该指针存储在栈上
+
 **Rules**
 - Each value in Rust has an ___owner___.
 - There can only be one owner at a time.
 - When the owner goes out of scope(作用域), the value will be dropped.
+
+![String](Pictures/String.png)
+
+##### move
+To avoid double free(二次释放), let s2 = s1 后, s1 不再有效
+```rust
+    let s1 = String::from("hello");
+    let s2 = s1;
+
+    println!("{s1}, world!");
+
+```
+![](Pictures/String2.png)
+
+##### clone
+```rust
+```rust
+let s1 = String::from("hello");
+    let s2 = s1.clone();
+
+    println!("s1 = {s1}, s2 = {s2}");
+```
+copy the data on stack and __heap__
+ps: 对于整型这种已知大小的类型,整个存储在栈上,直接拷贝,不会move

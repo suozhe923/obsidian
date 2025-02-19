@@ -14,9 +14,9 @@ Some of the keys may be unique for every row
 	Every non key attribute must provide a fact about the key,the whole key,and nothing but the key.
 
 ### Entity and Relationship
-![[Entity and Relationship.png]]
+![Entity and Relationship](../../Pictures/Entity%20and%20Relationship.png)
 
-![[outline1.png]]
+![outline1](../../Pictures/outline1.png)
 
 ## Data Definition and Manipulation
 ### Data Definition Language (DDL) 数据定义语言
