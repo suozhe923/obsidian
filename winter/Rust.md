@@ -350,3 +350,7 @@ fn main() {
 ```
 
 ## Ownership
+**Rules**
+- Each value in Rust has an ___owner___.
+- There can only be one owner at a time.
+- When the owner goes out of scope(作用域), the value will be dropped.
