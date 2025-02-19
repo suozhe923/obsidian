@@ -1,9 +1,10 @@
 另外的参考书:https://course.rs/about-book.html
-1. Start with an example : [[#Rust_example]]
-2. [[#Variables]]
-3. [[#Data_Types]]
-4. [[#Function]]
-5. [[#Control Flow]]
+1. Start with an example : [Rust_example](#Rust_example)
+2. [Variables](#Variables)
+3. [Data_Types](#Data_Types)
+4. [Function](#Function)
+5. [Control_Flow](#Control_Flow)
+6. [Ownership](#Ownership)
 ## Some commands
 - Cargo new *** (创建新的项目)
 - Cargo run
@@ -250,7 +251,7 @@ fn main() {
 }
 ```
 
-## Control Flow
+## Control_Flow
 ### If
 ```rust
 fn main() {
@@ -347,3 +348,5 @@ fn main() {
     println!("LIFTOFF!!!");
 }
 ```
+
+## Ownership
