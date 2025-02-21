@@ -76,26 +76,9 @@
               "icon": "lucide-file",
               "title": "lec1"
             }
-          },
-          {
-            "id": "27c29f11b817a801",
-            "type": "leaf",
-            "state": {
-              "type": "canvas",
-              "state": {
-                "file": "未命名.canvas",
-                "viewState": {
-                  "x": 0,
-                  "y": 0,
-                  "zoom": 0
-                }
-              },
-              "icon": "lucide-layout-dashboard",
-              "title": "未命名"
-            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -254,13 +237,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "27c29f11b817a801",
+  "active": "697d67d2caea61f5",
   "lastOpenFiles": [
     "未命名.canvas",
+    "大二下/数据库原理/lec1.md",
     "Rust.md",
     "大二下/计算机组成原理/lec1.md",
     "大二下/算法设计/lab1.md",
-    "大二下/数据库原理/lec1.md",
     "大二下/数据库原理/lab1.md",
     "大二下/离散数学/1.md",
     "大二下/算法设计",
