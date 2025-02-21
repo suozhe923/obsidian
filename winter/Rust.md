@@ -381,3 +381,102 @@ let s1 = String::from("hello");
 ```
 copy the data on stack and __heap__
 ps: 对于整型这种已知大小的类型,整个存储在栈上,直接拷贝,不会move
+
+__Copy trait 特殊注解(看完第十章再补充)__
+
+### Ownership and Functions
+```rust
+fn main() {
+    let s = String::from("hello");  // s comes into scope
+    takes_ownership(s);             // s's value moves into the function, and so is no longer valid here
+    let x = 5;                      // x comes into scope
+    makes_copy(x);                  // because i32 implements the Copy trait, x does NOT move into the function,
+    println!("{}", x);              // so it's okay to use x afterward
+} // Here, x goes out of scope, then s. But because s's value was moved, nothing special happens.
+fn takes_ownership(some_string: String) { // some_string comes into scope
+    println!("{some_string}");
+} // Here, some_string goes out of scope and `drop` is called. The backing
+  // memory is freed.
+fn makes_copy(some_integer: i32) { // some_integer comes into scope
+    println!("{some_integer}");
+} // Here, some_integer goes out of scope. Nothing special happens.
+```
+当尝试在调用 `takes_ownership` 后使用 `s` 时，Rust 会抛出一个编译时错误。这些静态检查使我们免于犯错。
+
+==Returning values can also transfer ownership.==
+返回值也可以转移所有权
+```rust
+fn main() {
+    let s1 = gives_ownership();         // gives_ownership 将返回值转移给 s1
+    let s2 = String::from("hello");     // s2 进入作用域
+    let s3 = takes_and_gives_back(s2);  // s2 被移动到takes_and_gives_back 中，它也将返回值移给 s3
+} // 这里，s3 移出作用域并被丢弃。s2 也移出作用域，但已被移走，
+  // 所以什么也不会发生。s1 离开作用域并被丢弃
+fn gives_ownership() -> String {             // gives_ownership 会将返回值移动给调用它的函数
+    let some_string = String::from("yours"); // some_string 进入作用域。
+    some_string                              // 返回 some_string 并移出给调用的函数
+}
+// takes_and_gives_back 将传入字符串并返回该值
+fn takes_and_gives_back(a_string: String) -> String { // a_string 进入作用域
+    a_string  // 返回 a_string 并移出给调用的函数
+}
+```
+变量的所有权总是遵循相同的模式：将值赋给另一个变量时移动它。当持有堆中数据值的变量离开作用域时，其值将通过 `drop` 被清理掉，除非数据被移动为另一个变量所有。
+
+### References and Borrowing(引用和借用)
+A reference is like a pointer in that it's an ___address___ 
+```rust
+fn main() {
+    let s1 = String::from("hello");
+    let len = calculate_length(&s1);
+    println!("The length of '{s1}' is {len}.");
+}
+fn calculate_length(s: &String) -> usize {
+    s.len()
+}
+```
+&s1 is the reference of s1. Because &s1 doesn't have ownership the value pointed to by the reference is not dropped.
+(dereference operator *)
+
+We call the action of creating a reference __borrowing__
+***references are immutable by default***
+```rust
+fn main() {
+    let mut s = String::from("hello");
+
+    change(&mut s);
+}
+
+fn change(some_string: &mut String) {
+    some_string.push_str(", world");
+}
+```
+
+if you have a mutable reference to a value, you can have no other references to that value.
+```rust
+let mut s = String::from("hello");
+
+    let r1 = &mut s;
+    let r2 = &mut s;
+
+    println!("{}, {}", r1, r2);
+```
+This code is invalid because we cannot borrow `s` as mutable more than once at a time. (同时不能有两个以上的可变引用,当前一个引用作用域结束,方可重新借用)
+We _also_ cannot have a mutable reference while we have an immutable one to the same value.(在有不可变引用时,不能有可变引用)
+A reference’s scope starts from where it is introduced and continues through the last time that reference is used(一个引用的作用域从声明的地方开始一直持续到最后一次使用为止)
+
+Dangling References(悬垂指针):其指向的内存可能已经被分配给其他持有者(rust中不存在,会直接编译失败)
+##### The Rules of References
+- At any given time, you can have _either_ one mutable reference _or_ any number of immutable references.
+- References must always be valid.
+
+### The Slice Type
+#### String Slices:
+> A _string slice_ is a reference to part of a `String`, and it looks like this:
+```rust
+let s = String::from("hello world");
+    let hello = &s[0..5];
+	//let hello = &[..5]; same
+    let world = &s[6..11];
+    //let world = &s[6..]; same
+```
