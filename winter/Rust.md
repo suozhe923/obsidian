@@ -563,3 +563,33 @@ fn build_user(email: String, username: String) -> User {
     }
 }
 ```
+
+struct update syntax
+> 创建一个新实例并使用旧实例的大部分值
+```rust
+fn main() {
+    // --snip--
+
+    let user2 = User {
+        active: user1.active,
+        username: user1.username,
+        email: String::from("another@example.com"),
+        sign_in_count: user1.sign_in_count,
+    };
+}
+```
+简写
+$\downarrow$ 
+```rust
+fn main() {
+    // --snip--
+
+    let user2 = User {
+        email: String::from("another@example.com"),
+        ..user1
+    };
+}
+```
+__注意:__ 结构更新语法就像带有 `=` 的赋值，因为它移动了数据,创建user2后不能用user1,因为user1 的String被移动到user2(若只是用active和sign_in_count则是实现copy trait,uers1仍有效)
+
+__unit-like structs__(类单元结构体): a type of structs which have no fields
