@@ -476,9 +476,9 @@ Dangling References(悬垂指针):其指向的内存可能已经被分配给其�
 ```rust
 let s = String::from("hello world");
 let hello = &s[0..5];
-	//let hello = &[..5]; same
-    let world = &s[6..11];
-    //let world = &s[6..]; same
+//let hello = &[..5]; same
+let world = &s[6..11];
+//let world = &s[6..]; same
 ```
 
 获取一个字符串(可能含空格分隔)的第一个单词
