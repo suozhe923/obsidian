@@ -1,10 +1,11 @@
 另外的参考书:https://course.rs/about-book.html
 1. Start with an example : [Rust_example](#Rust_example)
-2. [Variables](#Variables)
-3. [Data_Types](#Data_Types)
-4. [Function](#Function)
-5. [Control_Flow](#Control_Flow)
-6. [Ownership](#Ownership)
+2. [Variables(变量)](#Variables)
+3. [Data_Types(数据类型)](#Data_Types)
+4. [Function(函数)](#Function)
+5. [Control_Flow(控制流)](#Control_Flow)
+6. [Ownership(所有权)](#Ownership)
+7. [Struct(结构体)](#Struct)
 ## Some commands
 - Cargo new *** (创建新的项目)
 - Cargo run
@@ -472,13 +473,13 @@ Dangling References(悬垂指针):其指向的内存可能已经被分配给其�
 
 ### The Slice Type
 #### String Slices:
-> A _string slice_ is a reference to part of a `String`, and it looks like this:
+> A _string slice_ is a __reference__ to part of a `String`, and it looks like this:
 ```rust
 let s = String::from("hello world");
 let hello = &s[0..5];
 //let hello = &[..5]; same
 let world = &s[6..11];
-//let world = &s[6..]; same
+//let world = &s[6..]; same(即可省略头尾)
 ```
 
 获取一个字符串(可能含空格分隔)的第一个单词
@@ -495,8 +496,70 @@ fn first_word(s: &String) -> &str {
     &s[..]
 }
 ```
-#### 字符串字面值就是 slice
+>字符串字面值就是 slice
+>`let s = "Hello, world!";
+>这里 `s` 的类型是 `&str`：它是一个指向二进制程序特定位置的 slice。这也就是为什么字符串字面值是不可变的；`&str` 是一个不可变引用。
+
+除了字符串外还有其他类型的slice
 ```rust
-let s = "Hello, world!";
+let a = [1,2,3,4,5];
+let slice = &a[1..3];
+assert_eq!(slice, &[2,3])//assert_eq! can check if two values equal to each other, if not, program will stop
 ```
-这里 `s` 的类型是 `&str`：它是一个指向二进制程序特定位置的 slice。这也就是为什么字符串字面值是不可变的；`&str` 是一个不可变引用。
+
+## Struct
+> A struct(structure) is a custom data type that lets you package together and name multiple related values that make up a meaningful group
+
+```rust
+struct User {
+    active: bool,
+    username: String,
+    email: String,
+    sign_in_count: u64,
+}
+fn main() {
+    let user1 = User {
+        active: true,
+        username: String::from("someusername123"),
+        email: String::from("someone@example.com"),
+        sign_in_count: 1,
+    };
+}
+```
+> The entire instance must be mutable because rust doesn't allow us to make only certain fileds(字段) as mutable
+```rust
+fn main() {
+		//此处整个实例是可变的
+    let mut user1 = User {
+        active: true,
+        username: String::from("someusername123"),
+        email: String::from("someone@example.com"),
+        sign_in_count: 1,
+    };
+
+    user1.email = String::from("anotheremail@example.com");
+//从结构体中获取某个特定的值,可以使用"."
+}
+```
+
+```rust
+fn build_user(email: String, username: String) -> User {
+    User {
+        active: true,
+        username: username,
+        email: email,
+        sign_in_count: 1,
+    }
+}
+```
+>简写(因为参数名和字段名完全相同)
+```rust
+fn build_user(email: String, username: String) -> User {
+    User {
+        active: true,
+        username,
+        email,
+        sign_in_count: 1,
+    }
+}
+```
