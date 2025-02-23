@@ -475,7 +475,7 @@ Dangling References(悬垂指针):其指向的内存可能已经被分配给其�
 > A _string slice_ is a reference to part of a `String`, and it looks like this:
 ```rust
 let s = String::from("hello world");
-    let hello = &s[0..5];
+let hello = &s[0..5];
 	//let hello = &[..5]; same
     let world = &s[6..11];
     //let world = &s[6..]; same
