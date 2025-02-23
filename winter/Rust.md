@@ -480,3 +480,23 @@ let s = String::from("hello world");
     let world = &s[6..11];
     //let world = &s[6..]; same
 ```
+
+获取一个字符串(可能含空格分隔)的第一个单词
+```rust
+fn first_word(s: &String) -> &str {
+    let bytes = s.as_bytes();
+
+    for (i, &item) in bytes.iter().enumerate() {
+        if item == b' ' {
+            return &s[0..i];//slice
+        }
+    }
+
+    &s[..]
+}
+```
+#### 字符串字面值就是 slice
+```rust
+let s = "Hello, world!";
+```
+这里 `s` 的类型是 `&str`：它是一个指向二进制程序特定位置的 slice。这也就是为什么字符串字面值是不可变的；`&str` 是一个不可变引用。

@@ -69,12 +69,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "大二下/数据库原理/lec1.md",
+                "file": "Rust.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "lec1"
+              "title": "Rust"
             }
           }
         ],
@@ -227,7 +227,6 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "translate:Open translation view": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
@@ -239,8 +238,9 @@
   },
   "active": "697d67d2caea61f5",
   "lastOpenFiles": [
-    "未命名.canvas",
+    "GIT.md",
     "大二下/数据库原理/lec1.md",
+    "未命名.canvas",
     "Rust.md",
     "大二下/计算机组成原理/lec1.md",
     "大二下/算法设计/lab1.md",
@@ -250,7 +250,6 @@
     "Tools.md",
     "备忘录.md",
     "Pictures/String2.png",
-    "GIT.md",
     "Pictures/git_command.png",
     "Pictures/Entity and Relationship.png",
     "Pictures/outline1.png",
