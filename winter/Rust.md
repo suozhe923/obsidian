@@ -593,3 +593,24 @@ fn main() {
 __注意:__ 结构更新语法就像带有 `=` 的赋值，因为它移动了数据,创建user2后不能用user1,因为user1 的String被移动到user2(若只是用active和sign_in_count则是实现copy trait,uers1仍有效)
 
 __unit-like structs__(类单元结构体): a type of structs which have no fields
+
+> 打印结构体实例:
+```rust
+#[derive(Debug)]
+struct Rectangle {
+    width: u32,
+    height: u32,
+}
+
+fn main() {
+    let rect1 = Rectangle {
+        width: 30,
+        height: 50,
+    };
+
+    println!("rect1 is {rect1:?}");//:? can be replace as :#? to change the style
+	dbg!(&rect1);
+}
+```
+dbg!拥有传入值的所有权,因为不希望dbg!拥有rect1的所有权,调用时传入了rect1的引用
+
