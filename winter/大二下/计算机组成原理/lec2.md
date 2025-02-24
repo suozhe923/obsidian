@@ -60,27 +60,50 @@ Architecture (ISA)
 	add a, b, c             add a, b, c
 	add a, a, d     __or__    add f, d, e
 	add a, a, e             add a, a, f
-• Instructions are simple: fixed number of operands (unlike C)
-• A single line of C code is converted into multiple lines of assembly code
-• Some sequences are better than others… the second sequence needs one more
-(temporary) variable f
 
 All arithmetic operations have this form: add a, b, c(a = b + c)
-==Design Principle 1: Simplicity favors regularity==
-Design Principle 2: Smaller is faster
+- C code: f = (g + h) - (i + j)
+- Assembly:
+	add t0, g, h # 这是一个注释
+	add t1, i, j
+	sub f, t0, t1
 
+#### Assembly Variables: Registers
+汇编语言没有variables, Assembly language operands are objects called registers
+>RISC-V Registers
+>`本课程使用32bit`
+>Each RISC-V register is 32 bits wide called a “word”
+>Registers have __no type__
+>Operation determines how register contents are interpreted
 
-##### RISC-V Registers
-`本课程使用32bit`
-
-Register x0
+![Register](../../Pictures/Register.png)
+Instructions have an opcode and opeands
+例: add x1, x2, x3
+- add: Operation code(opcode)
+- x1: Destination register
+- x2: First operand register
+- x3: Second operand register
+##### Register x0
 > x0 is special, always holds the value zero and can't be changed
-
 - Copy a value from one register to another(add x3, x4, x0 same as f = g )
 - whenever a value is produced and we want to throw it away, write to x0
 - By convention RISC-V has a specific no-op instruction
 add x0,x0,x0
 - sed later with “jump-and-link” instruction
+
+##### Immediates
+> Immediates are used to provide numerical constants, 即时数用于提供数值常数, 语法和add instruction 类似但是最后一个参数是 number 而不是 register
+
+addi x3, x4, 10
+same as f = g + 10
+
+##### Numeric Representations
+
+- unsigned:
+待补充
+$$x=x_{n-1}2^{n-1} + x_{n-2}2^{n-2}$$
+$$ x + \overline{x} = -1$$
+$$ \overline{x} +1 = -x$$
 
 In RISC-V immediates are "sign extended"
 
@@ -93,6 +116,19 @@ add x11,x12,x10 # g = h + A[8]
 偏移量(32) = 数组序列数(8) x word字节数(4)
 lb 1byte; 1h 2 byte; 1d 8 byte
 
+##### Data transfer Operations
+- Registers vs. Memory
+	- Arithmetic operations can only be performed on registers
+	- Thus, the only memory actions are loads & stores
+- Given that 
+	- Registers: 32 words (128 Bytes)
+	- Memory (DRAM): Billions of bytes (2 GB to 16 GB on laptop)
+
+
+
+
+
+
 P32选C
 P33选D
 
@@ -102,3 +138,4 @@ P33选D
 Q1: addi 和 add区别
 Q2:0x meaning
 Q3:sub的计算是不是相当于add后一个数补码
+
