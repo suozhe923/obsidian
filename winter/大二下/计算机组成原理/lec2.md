@@ -100,12 +100,20 @@ same as f = g + 10
 ##### Numeric Representations
 
 - unsigned:
-待补充
-$$x=x_{n-1}2^{n-1} + x_{n-2}2^{n-2}$$
+$$x=x_{n-1}2^{n-1} + x_{n-2}2^{n-2 } + ...+x_12^1+x_02^0$$
+- signed:
+$$x=-x_{n-1}2^{n-1}+x_{n-2}2^{n-2}+...+x_12^1+x_02^0$$
+- Complement(取反)
 $$ x + \overline{x} = -1$$
 $$ \overline{x} +1 = -x$$
-
+##### Immediates & Sign Extension
+> Immediates are necessarily small
+ 
 In RISC-V immediates are "sign extended"
+	the upper bits are the same as the top bit
+e:
+- +2:***0***000 0010 => ***0000 0000 0***000 0010
+- -2 ***1***111 1110 => ***1111 1111 1***111 1110
 
 Register vs Memory
 Using Load Word (lw) in RISC-V:
