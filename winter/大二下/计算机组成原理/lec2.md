@@ -84,3 +84,13 @@ add x11,x12,x10 # g = h + A[8]
 ```
 偏移量(32) = 数组序列数(8) x word字节数(4)
 lb 1byte; 1h 2 byte; 1d 8 byte
+
+P32选C
+P33选D
+
+
+
+
+Q1: addi 和 add区别
+Q2:0x meaning
+Q3:sub的计算是不是相当于add后一个数补码
