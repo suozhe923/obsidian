@@ -1,46 +1,51 @@
-__concept__
+#### concept
 • Application software
 	• Written in high-level language
 • System software
-	• Compiler: translates HLL code to machine code
+	• Compiler: translates HLL(hight-level language) code to machine code
 • Operating System:
 	• Handling input/output
 	• Managing memory and storage
-	• Scheduling tasks & sharing resources
+	• Scheduling tasks & sharing resources(调度任务和共享资源)
 • Hardware
-	• Processor, memory, I/O controllers
+	• Processor(处理器), memory, I/O controllers
 
-__Instruction(指令) Set Architecture (ISA)__
-• A set of assembly language instructions (ISA) provides a link between
-software and hardware.
-• Given an instruction set, software programmers and hardware engineers
-work more or less independently.
+#### Levels of Program Code
+- high-level language
+- Assembly language(汇编语言)
+- Machine language
+#### Abstraction(抽象)
+__Instruction(指令) Set Architecture (ISA,指令集架构)__
+• _A set of assembly language instructions_ (ISA) provides a link between software and hardware.
 • Common types of ISA: RISC, CISC
-
-• Instructions: CPU’s primitive operations
+	• IBM370/X86 (CISC)
+	• RISC-V (RISC)
+	• MIPS (RISC)
+	• ARM (RISC)
+##### ISA
+• Instructions: CPU’s primitive(原始) operations
 	• Instructions performed one after another in sequence
-	• Each instruction does a small amount of work (a tiny part of a larger program).
-	• Each instruction has an operation applied to operands,
-	• and might be used to change the sequence of instructions.
+	• Each instruction does a **small** amount of work (a tiny part of a larger program).
+	• Each instruction has an operation applied to operands(操作数), and might be used to change the sequence of instructions.
 • CPUs belong to “families,” each implementing its own set of instructions
 • CPU’s particular set of instructions implements an Instruction Set
 Architecture (ISA)
 	• Examples: ARM, Intel x86, MIPS, RISC-V, PowerPC...
 
 ##### CISC vs RISC
-CISC:
-• Complex Instruction Set Computer
-• Variable instruction length
-• Much more powerful instructions
-• Hardware intensive instructions (more transistors
-• e.g. x86
+- CISC:
+	- Complex Instruction Set Computer
+	- Variable instruction length
+	- Much more powerful instructions
+	- Hardware intensive(密集) instructions (more transistors(晶体管)
+	- e.g. x86
 
-RISC:
-• Reduced Instruction Set Computer
-• Fixed instruction size
-• Simple instructions (load/store)
-• Emphasizes more on software (compiler)
-• e.g. MIPS, ARM, PowerPC, RISC-V
+- RISC:
+	-  Reduced Instruction Set Computer
+	-  Fixed instruction size
+	-  Simple instructions (load/store)
+	-  Emphasizes(强调) more on software (compiler)
+	-  e.g. MIPS, ARM, PowerPC, RISC-V
 
 CISC: wintel(windows + intel)
 RISA: 

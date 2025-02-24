@@ -222,8 +222,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -238,11 +237,11 @@
   },
   "active": "610387da614ca330",
   "lastOpenFiles": [
-    "备忘录.md",
-    "Tools.md",
-    "大二下/计算机组成原理/lec2.md",
-    "Rust.md",
     "大二下/计算机组成原理/lec1.md",
+    "大二下/计算机组成原理/lec2.md",
+    "Tools.md",
+    "备忘录.md",
+    "Rust.md",
     "大二下/数据库原理/lab1.md",
     "2025-02-23.md",
     "未命名.canvas",
