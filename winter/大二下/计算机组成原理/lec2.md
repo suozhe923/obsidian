@@ -52,11 +52,14 @@ Architecture (ISA)
 >	AA(ARM + Apple)
 >	RISC-V
 
+#### Basic Assembly instruction
 **Translate the following C code into assembly code**:
-a = b + c + d + e;
-add a, b, c add a, b, c
-add a, a, d or add f, d, e
-add a, a, e add a, a, f
+- C:
+	a = b + c + d + e;
+- Assembly:
+	add a, b, c             add a, b, c
+	add a, a, d     __or__    add f, d, e
+	add a, a, e             add a, a, f
 • Instructions are simple: fixed number of operands (unlike C)
 • A single line of C code is converted into multiple lines of assembly code
 • Some sequences are better than others… the second sequence needs one more

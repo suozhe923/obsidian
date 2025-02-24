@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "大二下/计算机组成原理/lec2.md",
+                "file": "大二下/计算机组成原理/lec1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "lec2"
+              "title": "lec1"
             }
           },
           {
@@ -238,8 +238,8 @@
   },
   "active": "610387da614ca330",
   "lastOpenFiles": [
-    "大二下/计算机组成原理/lec1.md",
     "大二下/计算机组成原理/lec2.md",
+    "大二下/计算机组成原理/lec1.md",
     "Tools.md",
     "备忘录.md",
     "Rust.md",
