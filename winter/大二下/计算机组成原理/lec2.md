@@ -64,4 +64,23 @@ Design Principle 2: Smaller is faster
 
 ##### RISC-V Registers
 `本课程使用32bit`
+
+Register x0
 > x0 is special, always holds the value zero and can't be changed
+
+- Copy a value from one register to another(add x3, x4, x0 same as f = g )
+- whenever a value is produced and we want to throw it away, write to x0
+- By convention RISC-V has a specific no-op instruction
+add x0,x0,x0
+- sed later with “jump-and-link” instruction
+
+In RISC-V immediates are "sign extended"
+
+Register vs Memory
+Using Load Word (lw) in RISC-V:
+```risc-v
+lw x10,32(x13) # reg x10 gets A[8]
+add x11,x12,x10 # g = h + A[8]
+```
+偏移量(32) = 数组序列数(8) x word字节数(4)
+lb 1byte; 1h 2 byte; 1d 8 byte
