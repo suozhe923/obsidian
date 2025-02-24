@@ -47,10 +47,10 @@ Architecture (ISA)
 	-  Emphasizes(强调) more on software (compiler)
 	-  e.g. MIPS, ARM, PowerPC, RISC-V
 
-CISC: wintel(windows + intel)
-RISA: 
-- AA(ARM + Apple)
-- RISC-V
+>CISC: wintel(windows + intel)
+>RISA: 
+>	AA(ARM + Apple)
+>	RISC-V
 
 **Translate the following C code into assembly code**:
 a = b + c + d + e;
