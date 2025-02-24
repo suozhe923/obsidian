@@ -93,8 +93,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "19c105baaa96bf83",
@@ -182,7 +181,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -197,27 +197,27 @@
   },
   "active": "d5775ea57aab330c",
   "lastOpenFiles": [
-    "latex.md",
-    "大二下/离散数学/1.md",
-    "大二下/数据库原理/lec1.md",
     "大二下/离散数学/2.md",
+    "大二下/计算机组成原理/lec2.md",
+    "大二下/计算机组成原理/lec1.md",
+    "大二下/数据库原理/lab1.md",
+    "大二下/数据库原理/lec1.md",
+    "大二下/算法设计/lab1.md",
+    "大二下/离散数学/1.md",
+    "latex.md",
     "Tools.md",
     "备忘录.md",
     "GIT.md",
-    "大二下/计算机组成原理/lec2.md",
     "Rust.md",
     "Pictures/String.png",
     "Pictures/git_command.png",
     "Pictures/Entity and Relationship.png",
     "Pictures/Register.png",
-    "大二下/计算机组成原理/lec1.md",
-    "大二下/数据库原理/lab1.md",
     "2025-02-23.md",
     "未命名.canvas",
     "THE_ART_OF_COMMAND_LINE.md",
     "Python.md",
     "Draft.md",
-    "大二下/算法设计/lab1.md",
     "大二下/算法设计",
     "Pictures/String2.png",
     "Pictures/outline1.png",
