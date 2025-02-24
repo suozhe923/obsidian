@@ -1,9 +1,12 @@
-$$x_{n-1}$$
-$$x_1$$
-$$x^{n-1}$$
-$$x^1$$
-$$\equiv$$
-$$\not\equiv$$
-$$\lnot$$
-$$\lor$$
-$$\land$$
+- $x_{n-1}$
+- $x_1$
+- $x^{n-1}$
+- $x^1$
+- $\equiv$
+- $\not\equiv$
+- $\lnot$
+- $\lor$
+- $\land$
+- $\oplus$
+- $\leftrightarrow$
+- $\Leftrightarrow$
