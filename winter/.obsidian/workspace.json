@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "大二下/数据库原理/lab1.md",
+                "file": "大二下/数据库原理/lec2.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "lab1"
+              "title": "lec2"
             }
           }
         ],
@@ -93,7 +93,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "19c105baaa96bf83",
@@ -181,8 +182,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -198,16 +198,19 @@
   },
   "active": "5070838ed927debf",
   "lastOpenFiles": [
+    "Pictures/Foreign.png",
+    "Pictures/reference.png",
+    "大二下/数据库原理/lec1.md",
     "大二下/数据库原理/lec2.md",
+    "大二下/数据库原理/lab1.md",
+    "Pictures/Relation.png",
     "大二下/数据库原理/Tool.md",
     "Pictures/outline1.png",
     "Tools.md",
     "GIT.md",
     "Hotkeys/$$$$.md",
-    "大二下/数据库原理/lec1.md",
     "大二下/计算机组成原理/lec2.md",
     "大二下/计算机组成原理/lec1.md",
-    "大二下/数据库原理/lab1.md",
     "大二下/离散数学/2.md",
     "大二下/离散数学/1.md",
     "latex.md",
