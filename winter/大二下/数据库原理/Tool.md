@@ -16,3 +16,6 @@ CLI:
 	- \timing 开关SQL运行时间显示
 	- \x 切换扩展模式
 	- \q 退出
+IDE:
+- beekeeper
+- datagrip
