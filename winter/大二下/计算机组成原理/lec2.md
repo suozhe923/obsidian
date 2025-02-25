@@ -122,7 +122,7 @@ lw x10,32(x13) # reg x10 gets A[8]
 add x11,x12,x10 # g = h + A[8]
 ```
 偏移量(32) = 数组序列数(8) x word字节数(4)
-lb 1byte; 1h 2 byte; 1d 8 byte
+lb 1byte; 1h 2 byte; 1d 8 byte(h 为half word)
 
 ##### Data transfer Operations
 - Registers vs. Memory
