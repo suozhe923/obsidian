@@ -70,3 +70,4 @@ delete from lab where time = '2-56';
 ```sql
 select * from lab;
 ```
+补全
