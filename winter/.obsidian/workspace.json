@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "大二下/离散数学/2.md",
+                "file": "大二下/数据库原理/lec1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2"
+              "title": "lec1"
             }
           }
         ]
@@ -183,8 +183,9 @@
   },
   "active": "930f10f4e0b48e65",
   "lastOpenFiles": [
-    "大二下/离散数学/1.md",
+    "大二下/数据库原理/lab1.md",
     "大二下/离散数学/2.md",
+    "大二下/离散数学/1.md",
     "latex.md",
     "Hotkeys/$$$$.md",
     "Untitled 1.md",
@@ -194,7 +195,6 @@
     "Hotkeys",
     "大二下/计算机组成原理/lec2.md",
     "大二下/计算机组成原理/lec1.md",
-    "大二下/数据库原理/lab1.md",
     "大二下/数据库原理/lec1.md",
     "大二下/算法设计/lab1.md",
     "Tools.md",

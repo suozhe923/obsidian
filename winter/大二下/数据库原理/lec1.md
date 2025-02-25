@@ -3,7 +3,7 @@ All the pieces of data in a row are
 related, hence "relational"
 A column (or a set of columns) to **differentiate** one row from another
 ### Primary Key(主键)
-Some of the keys may be unique for every row
+Some of the keys may be **unique** for every row
 - Student ID, Email address, 18-digit ID number, etc.
 - Usually, it is a good practice to choose the simplest one
 
