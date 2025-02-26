@@ -88,16 +88,30 @@ create table r (
 	- blob --binary large object
 	- bytea --used in psql
 ## Constraints
+> 约束可以被赋予名字(psql自动赋 if 没有手动)
 - not null
 	Use not null to indicate that these columns are mandatory
 - unique
 	- A unique constraint (on a combination of multiple columns)
+```sql
+create table if not exists stations
+(
+	station_id integer not null
+		constraint stations_pkey
+			primary key,
+	chinese_name varchar(10) not null
+		constraint stations_uq_2
+			unique, --单行unique
+	english_name varchar(80) not null,
+	line_id integer not null,
+	constraint uq unique (english_name, line_id) -- 多行unique
+);
+```
 - Primary key
-	- the value is mandatory(not null)
-	- that the values are unique (no duplicates allowed in the column)
+	- mandatory(not null)
+	- unique (no duplicates allowed in the column)
 - check
 	- A column must satisfy a certain boolean expression test
-> 约束可以被赋予名字(psql自动赋 if 没有手动),如下图constrain_birth
 ```sql
 create table people (
 	id int not null,
@@ -123,12 +137,23 @@ oi */
 - Format
 	- foreign key ($A_m,..A_n$) references r
 - eg:
-		```
+```sql
+create table connections
+(
+station_id integer not null
+	constraint connections_fk
+		references stations(station_id),
+connection varchar(100) not null,
+constraint connections_pk
+	primary key (station_id, connection) --要求引用的必须是其他表里的主键或是unique的
+);```
+		
 ```sql
 	...
 	foreign key (country) references country_list (country_code)
 	--country_code should be a key (primary key or unique) in the table country_list
 	...
+	
 ```
 
 ![Foreign](../../Pictures/Foreign.png)

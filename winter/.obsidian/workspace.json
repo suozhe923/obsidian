@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "大二下/数据库原理/lec2.md",
+                "file": "大二下/数据库原理/lab1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "lec2"
+              "title": "lab1"
             }
           }
         ],
@@ -181,7 +181,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -197,8 +198,8 @@
   },
   "active": "5070838ed927debf",
   "lastOpenFiles": [
-    "Tools.md",
     "大二下/数据库原理/lec2.md",
+    "Tools.md",
     "大二下/数据库原理/lec1.md",
     "Pictures/Foreign.png",
     "Pictures/reference.png",
