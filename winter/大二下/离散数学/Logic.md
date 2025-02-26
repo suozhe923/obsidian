@@ -1,3 +1,35 @@
+***Proposition(命题)***: a declarative(声明性) sentence that is either true or false (not both)
+- Declarative sentence: a sentence that makes a statement, while it does not ask a question or give an order  
+- Either true or false: fixed(固定); _no variable_ involved
+**Truth value** of a proposition:
+- true, denoted by T 
+- false, denoted by F.
+**Propositional variables**: variables that represent propositions(like p,q,r,s...)
+__Compound Propositions(复合命题)__:
+- Negation $\lnot$ 
+	$\lnot$p is read "not p"
+- Conjunction(And) $\land$
+	p$\land$q is "p and q"
+- Disjunction(Or) $\lor$
+- Exclusive or $\oplus$
+- Implication $\to$
+	p $\to$ q is 
+	- if p, then q
+	- p implies q
+	- p is sufficient for q
+	- q is necessary for p
+	- q follows from p
+	- p only if q
+	The converse(逆命题) of p → q is q → p.
+	The contrapositive(逆否) of p → q is ¬q → ¬p.
+		逆否命题有着相同的 truth value
+	The inverse(否) of p → q is ¬p → ¬q.
+- Biconditional $\leftrightarrow$
+	- p if and only if q
+	- p is necessary and sufficient for q
+	- if p then q, and conversely
+	- p iff q
+
 
 __Tautology and Contradiction__
 - Tautology(恒真式,重言式): A compound proposition that is __always true__, no matter what the truth values of the propositional variables that occur in it.
@@ -145,8 +177,7 @@ $$
 \forall x \forall y P(x,y) \equiv \forall y \forall x P(x,y)
 \end{aligned}
 $$
-
-##### Argument
+__Argument__
 > A sequence of propositions that end with a conclusion
 - Premises:
 	“If you have a current password, then you can log onto the network.”
@@ -155,12 +186,73 @@ $$
 	“You can log onto the network.”
 >An argument is _valid_ if the truth of all its premises implies that the conclusion is true(可以通过前提推导结论)
 
-##### Validity(有效性)
+__Rules of Inference for Propositional Logic__
+- modus ponens(law of detachment) 肯定前件式
 $$
 \begin{aligned}
 p \to q \\
 p \qquad \\
 \rule{1.5cm}{0.4pt}\\
 \therefore q \qquad
+\end{aligned}
+$$
+- modus tollens 否定后件式
+$$
+\begin{aligned}
+p \to q \\
+\lnot q \qquad \\
+\rule{1.5cm}{0.4pt}\\
+\therefore \lnot p \qquad
+\end{aligned}
+$$
+- hypothetical syllogism 假言三段论
+$$
+\begin{aligned}
+p \to q \\
+\ q \to r \\
+\rule{1.5cm}{0.4pt}\\
+\therefore p \to r
+\end{aligned}
+$$
+- disjunctive syllogism 选言三段论
+$$
+\begin{aligned}
+p \lor q \\
+\lnot p \quad \\
+\rule{1.5cm}{0.4pt}\\
+\therefore q \quad
+\end{aligned}
+$$
+- Addition
+$$
+\begin{aligned}
+p \qquad\\ \rule{1.2cm}{0.4pt}
+\\ \therefore p \lor q
+\end{aligned}
+$$
+- Simplication
+$$
+\begin{aligned}
+p \land q \\
+\rule{1.2cm}{0.4pt}\\
+\therefore q
+\end{aligned}
+$$
+- Conjunction
+$$
+\begin{aligned}
+p \qquad\\
+q \qquad\\
+\rule{1.5cm}{0.4pt}\\
+\therefore p \land q
+\end{aligned}
+$$
+- Resolution
+$$
+\begin{aligned}
+\lnot p \lor r \\
+p \lor q \\
+\rule{1.2cm}{0.4pt}\\
+\therefore q \lor r
 \end{aligned}
 $$

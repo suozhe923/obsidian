@@ -1,0 +1,11 @@
+> A proof is a valid argument that establishes the truth of a mathematical statement. (Note: the truth of all its premises implies that the conclusion is true.)
+- 
+	- Axiom(公理): a statement or proposition which is regarded as being established.
+	- Theorem(定理): a statement that can be shown to be true.
+	- Lemma(引理): a statement that can be proved to be true, and is used in proving a theorem or proposition.
+- Methods
+	- Direct proof
+	- Proof by contrapositive(逆向)
+	- Proof by contradiction(矛盾)
+	- Proof by cases
+	- Proof of equivalence
