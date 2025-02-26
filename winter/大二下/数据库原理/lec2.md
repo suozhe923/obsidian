@@ -134,6 +134,8 @@ oi */
 ## Referential Integrity
 ![reference](../../Pictures/reference.png)
 ## Foreign Key
+> 多对一时把外键放在多的表里,多对多则建立一个中间表
+![Foreign2](../../Pictures/Foreign2.png)
 - Format
 	- foreign key ($A_m,..A_n$) references r
 - eg:
