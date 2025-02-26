@@ -137,6 +137,17 @@ oi */
 - Format
 	- foreign key ($A_m,..A_n$) references r
 - eg:
+例:
+一个系有多个学生,一个学生在一个系中
+表: 系
+1 CS
+2 MATH
+3 STA
+表 学生
+1 zmy _CS_
+2 zly _CS_
+3 zyx _MATH_
+(斜体为外键,关联表"系"中的主键)
 ```sql
 create table connections
 (
