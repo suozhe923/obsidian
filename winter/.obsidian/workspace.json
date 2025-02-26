@@ -93,8 +93,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "19c105baaa96bf83",
@@ -198,15 +197,15 @@
   },
   "active": "5070838ed927debf",
   "lastOpenFiles": [
+    "Tools.md",
+    "大二下/数据库原理/lec2.md",
+    "大二下/数据库原理/lec1.md",
     "Pictures/Foreign.png",
     "Pictures/reference.png",
-    "大二下/数据库原理/lec1.md",
-    "大二下/数据库原理/lec2.md",
     "大二下/数据库原理/lab1.md",
     "Pictures/Relation.png",
     "大二下/数据库原理/Tool.md",
     "Pictures/outline1.png",
-    "Tools.md",
     "GIT.md",
     "Hotkeys/$$$$.md",
     "大二下/计算机组成原理/lec2.md",

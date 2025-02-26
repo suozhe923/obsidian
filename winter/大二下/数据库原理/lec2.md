@@ -107,7 +107,7 @@ create table people (
 	died numeric(4),
 	unique (first_name, surname),--The combination of (first_name, surname) cannot be the same for any two rows
 )
-	constraint_birth check(died - born >=0 ),
+	constraint birth check(died - born >=0 ),
 	check(first_name = upper(first_name)
 /* multi-line 
 oi */
