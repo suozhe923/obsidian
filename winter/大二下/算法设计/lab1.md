@@ -1,5 +1,6 @@
 ## Recursion(递归)
 
+![](../../Pictures/a1.drawio.png)
 2.对于一个2x2的方格有两种平铺方式
 设f(n)为方法数
 2x1 : 1
