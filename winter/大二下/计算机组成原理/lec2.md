@@ -174,6 +174,7 @@ P33 C P35 D
 | Bitwise AND        | &   | and, andi |
 | Bitwise OR         | \|  | or, ori   |
 | Bitwise XOR        | ~   | xor,xori  |
+|                    |     |           |
 - Shift left logical
 	- Shift left and fill with 0 bits
 	- slli by i bits multiplies by $2^i$
