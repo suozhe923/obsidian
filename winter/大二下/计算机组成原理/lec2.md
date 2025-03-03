@@ -69,7 +69,7 @@ All arithmetic operations have this form: add a, b, c(a = b + c)
 	sub f, t0, t1
 
 #### Assembly Variables: Registers
-汇编语言没有variables, Assembly language operands are objects called registers
+汇编语言没有variables, Assembly language operands are objects called __registers__
 >RISC-V Registers
 >`本课程使用32bit`
 >Each RISC-V register is 32 bits wide called a “word”
@@ -94,8 +94,9 @@ Instructions have an opcode and opeands
 ##### Immediates
 > Immediates are used to provide numerical constants, 即时数用于提供数值常数, 语法和add类似但是最后一个参数是 number 而不是 register
 
-addi x3, x4, 10
-same as f = g + 10
+addi x3, x4, -10
+same as f = g - 10
+no subtract immediate instruction
 
 ##### Numeric Representations(数字表示)
 - Decimal $35_{10}$ or $35_{ten}$ 
@@ -132,29 +133,60 @@ e:
 
 ##### Memory Addresses are in Bytes
 - Data typically smaller than 32 bits, but rarely smaller than 8 bits(eg char type)
-- size of __word__ is 4 bytes
+- Remember, size of __word__ is 4 bytes
 - Memory is addressable to individual bytes(**内存是以字节（byte）为单位进行寻址的**，也就是说，每个字节都有唯一的地址，你可以单独访问它。)
 - Word addresses are 4 bytes apart(单词地址相距4个字节)
 - RISC-V does not require words to __be aligned in__ (对齐)memory(练习中要求integers word-aligned)
 
+##### Transfer from Memory to Register
+- C:
+	int A[100];
+	g = h + A[8];
+	- Assume(假设): x13 holds _base register_ (pointer to A[0])
+	- 32 is offset(偏移) in bytes
+	- Offset must be a constant known at assembly time
 
-
-
-P32选C
-P33选D
-
-
-
-Register vs Memory
 Using Load Word (lw) in RISC-V:
 ```RISC-V
-lw x10,32(x13) # reg x10 gets A[8]
+lw x10,32(x13) # register x10 gets A[8] whose offset is 32 from x13
 add x11,x12,x10 # g = h + A[8]
 ```
 偏移量(32) = 数组序列数(8) x word字节数(4)
-lb 1byte; 1h 2 byte; 1d 8 byte(h 为half word)
+lb(load byte) 1byte; 1h 2 byte; 1d 8 byte(h 为half word, d为double)
+##### Transfer from Register to Memory
+Using Store Word(sw) in RISC-V
+```RISC-V
+lw x10,32(x13) #reg x10 gets A[8] 
+add x11,x12,x10 #g=h+A[8]
+sw x11,40(x13) #A[10]=h+A[8]
+```
+x13+32 and x13+40 must be multiples of 4 to maintain alignment 
 
 
+P33 C P35 D
 
-Q3:sub的计算是不是相当于add后一个数补码
+##### Logical Operations
 
+| Operation          | C   | RISC-V    |
+| ------------------ | --- | --------- |
+| Shift left logical | <<  | sll       |
+| Shift right        | >>  | srl/sra   |
+| Bitwise AND        | &   | and, andi |
+| Bitwise OR         | \|  | or, ori   |
+| Bitwise XOR        | ~   | xor,xori  |
+- Shift left logical
+	- Shift left and fill with 0 bits
+	- slli by i bits multiplies by $2^i$
+- Shift right logical
+	- Shift right and fill with 0 bits
+	- srli by i bits divides by $2^i$ (unsigned only)
+- NOT can be implemented with XOR
+##### Conditional Operations
+>Branch to a labeled instruction if a condition is _true_, otherwise, continue sequentially
+- beq rs1, rs2, L1
+	- if ($rs1==rs2$) branch to instruction labeled L1
+- bne rs1, rs2, L1
+	- if ($rs1!=rs2$) branch to instruction labeled L1
+Unconditional branch
+- beq x0, x0, L1
+	- 直接跳转到L1
