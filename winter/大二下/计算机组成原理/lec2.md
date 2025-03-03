@@ -1,3 +1,4 @@
+> RISC-V introduction
 #### concept
 • Application software
 	• Written in high-level language
@@ -11,7 +12,7 @@
 	• Processor(处理器), memory, I/O controllers
 
 #### Levels of Program Code
-- high-level language
+- High-level language
 - Assembly language(汇编语言)
 - Machine language
 #### Abstraction(抽象)
@@ -24,12 +25,11 @@ __Instruction(指令) Set Architecture (ISA,指令集架构)__
 	• ARM (RISC)
 ##### ISA
 • Instructions: CPU’s primitive(原始) operations
-	• Instructions performed one after another in sequence
+	• Instructions performed __one after another__ in sequence
 	• Each instruction does a **small** amount of work (a tiny part of a larger program).
 	• Each instruction has an operation applied to operands(操作数), and might be used to change the sequence of instructions.
 • CPUs belong to “families,” each implementing its own set of instructions
-• CPU’s particular set of instructions implements an Instruction Set
-Architecture (ISA)
+• CPU’s particular(特定的) set of instructions implements an Instruction Set Architecture (ISA)
 	• Examples: ARM, Intel x86, MIPS, RISC-V, PowerPC...
 
 ##### CISC vs RISC
@@ -42,7 +42,7 @@ Architecture (ISA)
 
 - RISC:
 	-  Reduced Instruction Set Computer
-	-  Fixed instruction size
+	-  __Fixed__ instruction size
 	-  Simple instructions (load/store)
 	-  Emphasizes(强调) more on software (compiler)
 	-  e.g. MIPS, ARM, PowerPC, RISC-V
