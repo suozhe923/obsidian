@@ -84,45 +84,43 @@ Instructions have an opcode and opeands
 - x2: First operand register
 - x3: Second operand register
 ##### Register x0
-> x0 is special, always holds the value zero and can't be changed
+> x0 is special, always holds the value zero and can't be changed(不需要初始化)
 - Copy a value from one register to another(add x3, x4, x0 same as f = g )
 - whenever a value is produced and we want to throw it away, write to x0
 - By convention RISC-V has a specific no-op instruction
-add x0,x0,x0
-- sed later with “jump-and-link” instruction
+	add x0,x0,x0
+- see later with “jump-and-link” instruction
 
 ##### Immediates
-> Immediates are used to provide numerical constants, 即时数用于提供数值常数, 语法和add instruction 类似但是最后一个参数是 number 而不是 register
+> Immediates are used to provide numerical constants, 即时数用于提供数值常数, 语法和add类似但是最后一个参数是 number 而不是 register
 
 addi x3, x4, 10
 same as f = g + 10
 
-##### Numeric Representations
+##### Numeric Representations(数字表示)
+- Decimal $35_{10}$ or $35_{ten}$ 
+- Binary $00101_2$ or $00101_{two}$
+- 十六进制Hexadecimal $0x23$ or $23_{hex}$
+	0-15(decimal) -> 0-9,a-f(hex)
 
 - unsigned:
 $$x=x_{n-1}2^{n-1} + x_{n-2}2^{n-2 } + ...+x_12^1+x_02^0$$
 - signed:
 $$x=-x_{n-1}2^{n-1}+x_{n-2}2^{n-2}+...+x_12^1+x_02^0$$
-- Complement(取反)
+	- Complement(取反)
 $$ x + \overline{x} = -1$$
 $$ \overline{x} +1 = -x$$
 ##### Immediates & Sign Extension
 > Immediates are necessarily small
+> An I-type instruction can only have 12 bits of immediate
  
-In RISC-V immediates are "sign extended"
+In RISC-V immediates are "__sign extended__"
 	the upper bits are the same as the top bit
 e:
-- +2:***0***000 0010 => ***0000 0000 0***000 0010
-- -2 ***1***111 1110 => ***1111 1111 1***111 1110
-
-Register vs Memory
-Using Load Word (lw) in RISC-V:
-```risc-v
-lw x10,32(x13) # reg x10 gets A[8]
-add x11,x12,x10 # g = h + A[8]
-```
-偏移量(32) = 数组序列数(8) x word字节数(4)
-lb 1byte; 1h 2 byte; 1d 8 byte(h 为half word)
+- 例子(8bits to 16bits):
+	- +2:***0***000 0010 => ***0000 0000 0***000 0010
+	- -2 ***1***111 1110 => ***1111 1111 1***111 1110
+对于 12bit的immediate也是一样,addi时需要补全immediate,即Bits[31:12] get the the value as Bit 11
 
 ##### Data transfer Operations
 - Registers vs. Memory
@@ -130,9 +128,14 @@ lb 1byte; 1h 2 byte; 1d 8 byte(h 为half word)
 	- Thus, the only memory actions are loads & stores
 - Given that 
 	- Registers: 32 words (128 Bytes)
-	- Memory (DRAM): Billions of bytes (2 GB to 16 GB on laptop)
+	- Memory (DRAM,动态随机存取存储器): Billions of bytes (2 GB to 16 GB on laptop)
 
-
+##### Memory Addresses are in Bytes
+- Data typically smaller than 32 bits, but rarely smaller than 8 bits(eg char type)
+- size of __word__ is 4 bytes
+- Memory is addressable to individual bytes(**内存是以字节（byte）为单位进行寻址的**，也就是说，每个字节都有唯一的地址，你可以单独访问它。)
+- Word addresses are 4 bytes apart(单词地址相距4个字节)
+- RISC-V does not require words to __be aligned in__ (对齐)memory(练习中要求integers word-aligned)
 
 
 
@@ -142,8 +145,16 @@ P33选D
 
 
 
+Register vs Memory
+Using Load Word (lw) in RISC-V:
+```RISC-V
+lw x10,32(x13) # reg x10 gets A[8]
+add x11,x12,x10 # g = h + A[8]
+```
+偏移量(32) = 数组序列数(8) x word字节数(4)
+lb 1byte; 1h 2 byte; 1d 8 byte(h 为half word)
 
-Q1: addi 和 add区别
-Q2:0x meaning
+
+
 Q3:sub的计算是不是相当于add后一个数补码
 
