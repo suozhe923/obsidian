@@ -190,3 +190,8 @@ P33 C P35 D
 Unconditional branch
 - beq x0, x0, L1
 	- 直接跳转到L1
+
+
+RISC-V also has “unsigned byte” loads (lbu) which zero extend to
+fill register. Why no unsigned store byte sbu?
+store时不需要扩展,只是取末8Bit
