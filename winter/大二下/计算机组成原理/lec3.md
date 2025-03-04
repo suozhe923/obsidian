@@ -64,6 +64,7 @@ Assign x10=sum, x11=i
 9. addi x11, x11, 1 # i++
 10. beq x0, x0, loop # iterate
 11. ==exit==:
+
 - Optimized(优化版)
 1. add x10, x0, x0 # sum=0
 2. add x11, x0, x0 # i=0
