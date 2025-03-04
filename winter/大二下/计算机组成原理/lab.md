@@ -60,6 +60,7 @@
 ```
 
 ##### lab3
-
+![PC](Pic/PC.png)
+![jump](Pic/jump.png)
 # 杂记
 - 机器码占4个字节

@@ -181,8 +181,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -198,6 +197,8 @@
   },
   "active": "87cb4fe9433e2b23",
   "lastOpenFiles": [
+    "大二下/计算机组成原理/Pic/jump.png",
+    "大二下/计算机组成原理/Pic/PC.png",
     "大二下/计算机组成原理/Pic/ecall.png",
     "大二下/计算机组成原理/Pic/屏幕截图_20250304_180725.png",
     "未命名.canvas",
@@ -222,9 +223,7 @@
     "大二下/离散数学/Logic.md",
     "大二下/离散数学/3.md",
     "大二下/离散数学/2.md",
-    "Pictures/Foreign2.png",
     "大二下/数据库原理/lec1.md",
-    "Pictures/Foreign.png",
     "大二下/数据库原理/Tool.md",
     "GIT.md",
     "Hotkeys/$$$$.md",
