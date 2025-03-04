@@ -35,7 +35,8 @@
               "title": "lec3"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -196,12 +197,12 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "930f10f4e0b48e65",
+  "active": "87cb4fe9433e2b23",
   "lastOpenFiles": [
+    "大二下/数据库原理/lec2.md",
     "Tools.md",
     "大二下/计算机组成原理/lec2.md",
     "大二下/数据库原理/lec3.md",
-    "大二下/数据库原理/lec2.md",
     "大二下/计算机组成原理/lec3.md",
     "大二下/计算机组成原理/Pic/Shift.png",
     "大二下/计算机组成原理/Pic/Endian.png",
