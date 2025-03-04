@@ -107,7 +107,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "19c105baaa96bf83",
@@ -212,6 +213,9 @@
   },
   "active": "87cb4fe9433e2b23",
   "lastOpenFiles": [
+    "大二下/计算机组成原理/Pic/Endian.png",
+    "大二下/计算机组成原理/Pic/Endianness.png",
+    "大二下/计算机组成原理/Pic/lb.png",
     "大二下/数据库原理/lec2.md",
     "大二下/数据库原理/lab1.md",
     "大二下/计算机组成原理/lec2.md",
@@ -244,13 +248,10 @@
     "Hotkeys",
     "备忘录.md",
     "Rust.md",
-    "Pictures/String.png",
-    "Pictures/git_command.png",
     "2025-02-23.md",
     "未命名.canvas",
     "THE_ART_OF_COMMAND_LINE.md",
     "Python.md",
-    "Draft.md",
     "大二下/算法设计",
     "大二下/计算机组成原理",
     "大二下/数据库原理",

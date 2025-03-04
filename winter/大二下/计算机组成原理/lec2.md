@@ -155,15 +155,29 @@ add x11,x12,x10 # g = h + A[8]
 lb(load byte) 1byte; 1h 2 byte; 1d 8 byte(h 为half word, d为double)
 ##### Transfer from Register to Memory
 Using Store Word(sw) in RISC-V
-```RISC-V
-lw x10,32(x13) #reg x10 gets A[8] 
-add x11,x12,x10 #g=h+A[8]
-sw x11,40(x13) #A[10]=h+A[8]
-```
+lw x10,32(x13) # reg x10 gets A[8] 
+add x11,x12,x10 # g=h+A[8]
+==sw x11,40(x13)== # A[10]=h+A[8]
+
 x13+32 and x13+40 must be multiples of 4 to maintain alignment 
 
+- byte data transfers:
+	- load byte: lb
+	- store byte: sb
+	- eg: lb x10,3(x11)
+![lb](Pic/lb.png)
+(一个byte 有8位, 取最高位进行扩展)
 
-P33 C P35 D
+同时我们有 __unsigned byte__ load (lbu) which zero extend to fill register, but no sbu because store a byte just need the last 8 bit(不需要考虑有无符号位)
+
+##### Endianness
+![Endianness](Pic/Endianness.png)
+选C:
+addi x11,x0,0x3f5 -- 给x11赋值为0x3f5 (0000 ... 0000(20个0) 0011 1111 0101), 有符号扩展,当符号位为1时要填充1
+sw x11,0(x5) -- 将x11中一个word(4 byte)储存到x5所存的地址处
+lb x12,1(x5) --在距x5地址1 byte 处取1 byte 并有符号扩展, 即对1111 进行有符号扩展得到0xffffffff
+![Endian](Pic/Endian.png)
+(本图解释了为什么RISC-V中 1(x5) 在0(x5)左边)
 
 ##### Logical Operations
 
@@ -174,7 +188,6 @@ P33 C P35 D
 | Bitwise AND        | &   | and, andi |
 | Bitwise OR         | \|  | or, ori   |
 | Bitwise XOR        | ~   | xor,xori  |
-|                    |     |           |
 - Shift left logical
 	- Shift left and fill with 0 bits
 	- slli by i bits multiplies by $2^i$
