@@ -77,3 +77,12 @@ Assign x10=sum, x11=i
 8. addi x11, x11, 4 # i++
 9. beq x0, x0, loop # iterate
 10. exit:
+Optimum
+1. add x10, x0, x0 # sum=0
+2. add x11, x0, x8 # Copy of A
+3. addi x12, x8, 80 # x12=80 + A
+4. loop:
+	 lw x13, 0(x11)
+5. add x10, x10, x13
+6. addi x11, x11, 4
+7. blt x11, x12, loop
