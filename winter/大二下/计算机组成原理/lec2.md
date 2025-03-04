@@ -194,18 +194,8 @@ lb x12,1(x5) --在距x5地址1 byte 处取1 byte 并有符号扩展, 即对1111 
 - Shift right logical
 	- Shift right and fill with 0 bits
 	- srli by i bits divides by $2^i$ (unsigned only)
-- NOT can be implemented with XOR
-##### Conditional Operations
->Branch to a labeled instruction if a condition is _true_, otherwise, continue sequentially
-- beq rs1, rs2, L1
-	- if ($rs1==rs2$) branch to instruction labeled L1
-- bne rs1, rs2, L1
-	- if ($rs1!=rs2$) branch to instruction labeled L1
-Unconditional branch
-- beq x0, x0, L1
-	- 直接跳转到L1
-
-
-RISC-V also has “unsigned byte” loads (lbu) which zero extend to
-fill register. Why no unsigned store byte sbu?
-store时不需要扩展,只是取末8Bit
+- Shift right arithmetic
+	- 补全数取决于符号位
+![Shift](Pic/Shift.png)
+- NOT(按位取反) can be implemented with XOR
+	- xori x15,x14,-1 (-1表示为1111...1111)
