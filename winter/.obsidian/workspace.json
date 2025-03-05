@@ -11,12 +11,14 @@
             "id": "f5514da648171644",
             "type": "leaf",
             "state": {
-              "type": "pdf-annotator",
+              "type": "markdown",
               "state": {
-                "file": "未命名.md"
+                "file": "大二下/数据库原理/lec3.md",
+                "mode": "source",
+                "source": false
               },
               "icon": "lucide-file",
-              "title": "未命名"
+              "title": "lec3"
             }
           }
         ]
@@ -181,26 +183,27 @@
   },
   "active": "f5514da648171644",
   "lastOpenFiles": [
-    "大二下/数据库原理/Pdf/T2.pdf",
-    "未命名.md",
-    "Draft.md",
+    "大二下/数据库原理/Pdf/T3.pdf",
+    "大二下/数据库原理/lec3.md",
+    "大二下/数据库原理/Pic/cast.png",
+    "大二下/数据库原理/lec2.md",
+    "大二下/数据库原理/Tool.md",
+    "大二下/数据库原理/Pic/Operator_precedence.png",
+    "大二下/数据库原理/Pic/select1.png",
     "Docker.md",
+    "未命名.md",
+    "目录.md",
+    "大二下/数据库原理/Pdf/T2.pdf",
+    "Draft.md",
     "备忘录.md",
     "大二下/数据库原理/Pdf/annotation.md",
-    "大二下/数据库原理/lec2.md",
-    "大二下/数据库原理/Pdf/T3.pdf",
     "大二下/数据库原理/lab3.md",
     "大二下/数据库原理/Pdf",
-    "大二下/数据库原理/lec3.md",
     "大二下/数据库原理/lab1.md",
     "大二下/数据库原理/lec1.md",
-    "大二下/数据库原理/Pic/Operator_precedence.png",
     "大二下/数据库原理/Pic/select2.png",
-    "大二下/数据库原理/Pic/select1.png",
     "大二下/数据库原理/Pic",
     "Tools.md",
-    "目录.md",
-    "大二下/数据库原理/Tool.md",
     "大二下/计算机组成原理/lab.md",
     "大二下/计算机组成原理/Pic/jump.png",
     "大二下/计算机组成原理/Pic/PC.png",
@@ -212,7 +215,6 @@
     "大二下/计算机组成原理/lec3.md",
     "大二下/计算机组成原理/Pic/Shift.png",
     "大二下/计算机组成原理/Pic/Endian.png",
-    "大二下/计算机组成原理/Pic/Endianness.png",
     "大二下/计算机组成原理/Pic",
     "大二下/算法设计/lab1.md",
     "大二下/离散数学/Proof.md",
