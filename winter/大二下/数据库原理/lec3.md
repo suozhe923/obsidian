@@ -34,8 +34,42 @@ where country = 'us';
 	- An attribute(属性) can be a literal with no from clause
 		`select '437'`
 		- Results is a table with one column and a single row with value “437”
-		- Can give the column a name using:
+		- __rename__: Can give the column a name using:
 		`select '437' as FOO`
+		![select1](Pic/select1.png)
 	- An attribute can be a literal with from clause
 		`select 'A' from movies`
 		- Result is a table with one column and N rows (number of tuples in the movies table), each row with value "A"
+		![select2](Pic/select2.png)
+
+- Arithmetic Expression
+	- select子句可以包含算术表达式(+ ,- ,* ,/ ), 作用在constants or arributes of tuples
+- Logical Connectives
+	- and, or, not
+		- 就像编程语言一样
+		- 有不同优先级(and > or), 可以用括号(parentheses)改变运算顺序
+			![Operator_precedence](Pic/Operator_precedence.png)
+- The operands of the logical connectives can be expressions __involving__ the comparison operators <, <=, >, >=, =, and <>.
+	- != and <> 都可以表示not equal to
+- 注意data type
+	- 2 < 10 is true but '2' < '10' is false
+- in()
+	- It can be used as the equivalent for a series of equalities with or
+		`where (a = 'us' or a = 'ch'`
+		`where a in ('us`, 'ch')`
+- Negation
+	- All comparisons can be negated with not
+```sql
+where not (   (country in ('us', 'gb')) and (year_released between 1940 and 1949)   )
+where (country in ('us', 'gb')) and (year_released between 1940 and 1949)
+```
+
+- between Comparison Operator
+	- between ... and ...
+		- shorthand for: >= and <= (左闭右闭)
+- like
+	- For strings, you also have like which is a kind of regex (regular expression 正则表达式) for dummies.
+	- like compares a string to a pattern that can contain two wildcard characters:
+		- % meaning "any number of characters, including none”
+		- _ meaning "one and only one character"
+
