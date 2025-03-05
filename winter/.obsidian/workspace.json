@@ -4,19 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "a3fa0a012c1b0d18",
+        "id": "a38fc45b3b44e2e0",
         "type": "tabs",
         "children": [
           {
-            "id": "930f10f4e0b48e65",
+            "id": "f5514da648171644",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "pdf-annotator",
               "state": {
-                "file": "大二下/数据库原理/Pdf/Tutorial 2 DDL and Constrains.pdf"
+                "file": "未命名.md"
               },
-              "icon": "lucide-file-text",
-              "title": "Tutorial 2 DDL and Constrains"
+              "icon": "lucide-file",
+              "title": "未命名"
             }
           }
         ]
@@ -179,11 +179,16 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "930f10f4e0b48e65",
+  "active": "f5514da648171644",
   "lastOpenFiles": [
+    "大二下/数据库原理/Pdf/T2.pdf",
+    "未命名.md",
+    "Draft.md",
+    "Docker.md",
+    "备忘录.md",
+    "大二下/数据库原理/Pdf/annotation.md",
     "大二下/数据库原理/lec2.md",
-    "大二下/数据库原理/Pdf/Tutorial 2 DDL and Constrains.pdf",
-    "大二下/数据库原理/Pdf/Tutorial3 Simple queries on a single table.pdf",
+    "大二下/数据库原理/Pdf/T3.pdf",
     "大二下/数据库原理/lab3.md",
     "大二下/数据库原理/Pdf",
     "大二下/数据库原理/lec3.md",
@@ -196,7 +201,6 @@
     "Tools.md",
     "目录.md",
     "大二下/数据库原理/Tool.md",
-    "备忘录.md",
     "大二下/计算机组成原理/lab.md",
     "大二下/计算机组成原理/Pic/jump.png",
     "大二下/计算机组成原理/Pic/PC.png",
@@ -218,10 +222,6 @@
     "GIT.md",
     "Hotkeys/$$$$.md",
     "latex.md",
-    "Untitled 1.md",
-    "Untitled 3.md",
-    "Untitled 2.md",
-    "Untitled.md",
     "Hotkeys",
     "大二下/算法设计",
     "大二下/计算机组成原理",
