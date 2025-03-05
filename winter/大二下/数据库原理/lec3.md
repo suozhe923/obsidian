@@ -72,4 +72,5 @@ where (country in ('us', 'gb')) and (year_released between 1940 and 1949)
 	- like compares a string to a pattern that can contain two wildcard characters:
 		- % meaning "any number of characters, including none”
 		- _ meaning "one and only one character"
+- Date
 
