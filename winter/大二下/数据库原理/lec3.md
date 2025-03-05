@@ -23,4 +23,12 @@ where country = 'us';
 		- another column (from the same table or another, we'll see queries involving several tables later)
 		- the result of a function (we'll see them soon)
 
+> string constant must be quoted between single-quotes(' ')
+> 	If they aren't quoted, they wiil be interpreted as column names
 
+- Filtering
+	- Note that a filtering condition returns a subset
+		- If you return all the columns from a table without duplicates(重复), it won't contain duplicates either and will be a valid "relation"
+
+- Select without From or Where
+	
