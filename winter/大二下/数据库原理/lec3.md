@@ -31,4 +31,11 @@ where country = 'us';
 		- If you return all the columns from a table without duplicates(重复), it won't contain duplicates either and will be a valid "relation"
 
 - Select without From or Where
-	
+	- An attribute(属性) can be a literal with no from clause
+		`select '437'`
+		- Results is a table with one column and a single row with value “437”
+		- Can give the column a name using:
+		`select '437' as FOO`
+	- An attribute can be a literal with from clause
+		`select 'A' from movies`
+		- Result is a table with one column and N rows (number of tuples in the movies table), each row with value "A"
