@@ -25,14 +25,12 @@
             "id": "87cb4fe9433e2b23",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "大二下/数据库原理/lab3.md",
-                "mode": "source",
-                "source": false
+                "file": "大二下/数据库原理/Pdf/Tutorial 2 DDL and Constrains.pdf"
               },
-              "icon": "lucide-file",
-              "title": "lab3"
+              "icon": "lucide-file-text",
+              "title": "Tutorial 2 DDL and Constrains"
             }
           }
         ],
@@ -198,8 +196,11 @@
   },
   "active": "87cb4fe9433e2b23",
   "lastOpenFiles": [
-    "大二下/数据库原理/lec3.md",
+    "大二下/数据库原理/Pdf/Tutorial3 Simple queries on a single table.pdf",
+    "大二下/数据库原理/Pdf/Tutorial 2 DDL and Constrains.pdf",
     "大二下/数据库原理/lab3.md",
+    "大二下/数据库原理/Pdf",
+    "大二下/数据库原理/lec3.md",
     "大二下/数据库原理/lab1.md",
     "大二下/数据库原理/lec2.md",
     "大二下/数据库原理/lec1.md",
@@ -237,13 +238,10 @@
     "Untitled 2.md",
     "Untitled.md",
     "Hotkeys",
-    "Rust.md",
     "大二下/算法设计",
     "大二下/计算机组成原理",
     "大二下/数据库原理",
     "计算机组成原理",
-    "Pictures",
-    "大二下/离散数学/1.md~",
-    "大二下/离散数学"
+    "Pictures"
   ]
 }
